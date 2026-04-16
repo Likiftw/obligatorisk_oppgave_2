@@ -38,4 +38,17 @@ public class MineTester
     }
 }
 
+//PS C:\Users\likva\Documents\C# innlevering 2> dotnet test
+Restore complete (0,3s)
+  MittProgram net10.0 succeeded (0,1s) → MittProgram\bin\Debug\net10.0\MittProgram.dll
+  MittProgram.Tests net10.0 succeeded (0,1s) → MittProgram.Tests\bin\Debug\net10.0\MittProgram.Tests.dll
+[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.4+50e68bbb8b (64-bit .NET 10.0.5)
+[xUnit.net 00:00:00.04]   Discovering: MittProgram.Tests
+[xUnit.net 00:00:00.06]   Discovered:  MittProgram.Tests
+[xUnit.net 00:00:00.07]   Starting:    MittProgram.Tests
+[xUnit.net 00:00:00.10]   Finished:    MittProgram.Tests
+  MittProgram.Tests test net10.0 succeeded (0,5s)
 
+Test summary: total: 3; failed: 0; succeeded: 3; skipped: 0; duration: 0,5s
+Build succeeded in 1,2s
+PS C:\Users\likva\Documents\C# innlevering 2> //
