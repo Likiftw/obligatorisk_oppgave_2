@@ -1,0 +1,41 @@
+using Xunit;
+using MittProgram;
+
+namespace MittProgram.Tests;
+
+public class MineTester
+{
+    [Fact]
+    public void Test_MeldPaStudent()
+    {
+        var student = new Student("S100", "Test", "t@t.no", "test", "123");
+        var kurs = new Kurs("T1", "Testkurs", 10, 5, "F1");
+        bool resultat = kurs.MeldPa(student);
+        Assert.True(resultat);
+    }
+
+    [Fact]
+    public void Test_Bibliotek_LanUt()
+    {
+        var bibliotek = new Bibliotek();
+        var bok = new Bok("B1", "Testbok", "Forfatter", 2024, 5);
+        bibliotek.RegistrerBok(bok);
+        var student = new Student("S1", "Ola", "o@t.no", "o", "123");
+        bool resultat = bibliotek.LanUtBok("B1", student);
+        Assert.True(resultat);
+    }
+
+    [Fact]
+    public void Test_Bibliotek_LanUt_BokSomIkkeFinnes()
+    {
+        var bibliotek = new Bibliotek();
+        var student = new Student("S1", "Ola", "o@t.no", "o", "123");
+        
+        // Prøver å låne en bok med ID som ikke eksisterer
+        bool resultat = bibliotek.LanUtBok("FINNES_IKKE", student);
+        
+        Assert.False(resultat);
+    }
+}
+
+
